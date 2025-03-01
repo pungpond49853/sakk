@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green Recycle System on the Android Operating System</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            background: url('https://globaltrashsolutions.com/wp-content/uploads/2024/09/green-recycle-symbol-icon-sign-with-professional-environment-background-to-represent-recycling.jpg') no-repeat center center fixed;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px 40px;
+            background: linear-gradient(90deg, #2E7D32, #66BB6A);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: white;
+            z-index: 1;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .navbar .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .navbar button {
+            background: linear-gradient(90deg, #43A047, #81C784);
+            border: none;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 30px;
+            cursor: pointer;
+            position: absolute;
+            left: 20px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar button:hover {
+            background: linear-gradient(90deg, #388E3C, #66BB6A);
+            transform: scale(1.05);
+        }
+
+        /* Video Background Styling */
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Homepage Styling */
+        #homepage, #model-page {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .container {
+            background: rgba(0, 0, 0, 0.7);
+            width: 50%;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #A5D6A7;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin: 15px 0;
+        }
+
+        .button-group button {
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 20px;
+            border: none;
+            border-radius: 30px;
+            background: linear-gradient(45deg, #4CAF50, #66BB6A);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .button-group button:hover {
+            background: linear-gradient(45deg, #388E3C, #81C784);
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <!-- Video Background -->
+    <video autoplay loop muted playsinline id="background-video">
+        <source src="/mnt/data/video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">Green Recycle System on the Android Operating System</div>
+        <button onclick="showHomepage()">Back</button>
+    </div>
+
+    <!-- Homepage Section -->
+    <div id="homepage">
+        <div class="container">
+            <h1>Green Recycle System</h1>
+            <h2>เปลี่ยนขยะเป็นแต้ม สร้างสิ่งแวดล้อมที่ยั่งยืน</h2>
+            <div class="button-group">
+                <button onclick="showModelPage()">เริ่มต้นใช้งาน</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Model Page Section -->
+    <!-- Model Page Section -->
+    <div id="model-page" style="display: none;">
+        <div class="container">
+            <h1> คลิปการนำเสนอโครงงานGreen Recycle</h1>
+            <iframe width="600" height="350" src="https://www.youtube.com/embed/Sao7uppF5A0" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </div>
+    <script>
+        function showModelPage() {
+            document.getElementById('homepage').style.display = 'none';
+            document.getElementById('model-page').style.display = 'flex';
+        }
+
+        function showHomepage() {
+            document.getElementById('model-page').style.display = 'none';
+            document.getElementById('homepage').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
